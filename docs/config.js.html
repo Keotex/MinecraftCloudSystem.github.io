@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: config.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: config.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Config wrapper
+ * @module classes/config
+ */
+
+var config = require('../config.json');
+
+/**
+ * Gets the mysql host
+ * @returns {string}
+ */
+exports.getMySQLHost = function() {
+    return config.mysql.host;
+};
+
+/**
+ * Sets the mysql host
+ * @param value The host
+ */
+exports.setMySQLHost = function(value) {
+    config.mysql.host = value;
+};
+
+/**
+ * Gets the mysql username
+ * @returns {string}
+ */
+exports.getMySQLUser = function() {
+    return config.mysql.user;
+};
+
+/**
+ * Sets the mysql user
+ * @param value The user
+ */
+exports.setMySQLUser = function(value) {
+    config.mysql.user = value;
+};
+
+/**
+ * Gets the mysql password
+ * @returns {string}
+ */
+exports.getMySQLPassword = function() {
+    return config.mysql.password;
+};
+
+/**
+ * Sets the mysql password
+ * @param value The password
+ */
+exports.setMySQLPassword = function(value) {
+    config.mysql.password = value;
+};
+
+/**
+ * Gets the mysql database name
+ * @returns {string}
+ */
+exports.getMySQLDatabase = function() {
+    return config.mysql.database;
+};
+
+/**
+ * Gets the mysql database name
+ * @param value The mysql database name
+ */
+exports.setMySQLDatabase = function(value) {
+    config.mysql.database = value;
+};
+
+/**
+ * Gets the mysql pool size
+ * @returns {int}
+ */
+exports.getMySQLPoolSize = function() {
+    return config.mysql.poolsize;
+};
+
+/**
+ * Sets the mysql pool size
+ * @param value The pool size
+ */
+exports.setMySQLPoolSize = function(value) {
+    config.mysql.poolSize = value;
+};
+
+/**
+ * Gets the webinterface port
+ * @returns {int}
+ */
+exports.getWebInterfacePort = function() {
+    return config.wi_port;
+};
+
+/**
+ * Sets the webinterface port
+ * @param value The webinterface port
+ */
+exports.setWebInterfacePort = function(value) {
+    config.mysql.wi_port = value;
+};
+
+/**
+ * Checks if https is enabled
+ * @returns {boolean}
+ */
+exports.isHTTPSEnabled = function() {
+    return config.https.enabled;
+};
+
+/**
+ * Sets the value whether to enable https or not
+ * @param value true or false
+ */
+exports.setHTTPSEnabled = function(value) {
+    config.https.enabled = value;
+};
+
+/**
+ * Checks if SPDY (HTTP/2.0) is enabled
+ * @returns {boolean}
+ */
+exports.isSPDYEnabled = function() {
+    return config.https.spdy;
+};
+
+/**
+ * Sets the value whether to enable SPDY (HTTP/2.0) or not
+ * @param value true or false
+ */
+exports.setSPDYEnabled = function(value) {
+    config.https.spdy = value;
+};
+
+/**
+ * Gets the domain of the webinterface
+ * @returns {string}
+ */
+exports.getDomain = function() {
+    return config.domain;
+};
+
+/**
+ * Sets the domain of the webinterface
+ * @param value The domain
+ */
+exports.setDomain = function(value) {
+    config.domain = value;
+};
+
+/**
+ * Gets the port where the daemons connect
+ * @returns {int}
+ */
+exports.getCloudSystemPort = function() {
+    return config.cloudsystem_port;
+};
+
+/**
+ * Sets the port where the daemons connect
+ * @param value The port
+*/
+exports.setCloudSystemPort = function(value) {
+    config.cloudsystem_port = value;
+};
+
+/**
+ * Gets the IP where the webserver should listen
+ * @returns {string}
+ */
+exports.getListenIP = function() {
+    return config.listenip;
+};
+
+/**
+ * Sets the IP where the webserver should listen
+ * @param value The IP
+ */
+exports.setListenIP = function(value) {
+    config.listenip = value;
+};
+
+/**
+ * Checks if the cloudsystem is in debug mode
+ * @returns {boolean}
+ */
+exports.isDebugMode = function() {
+    return config.debug;
+};
+
+/**
+ * Sets the value whether the cloudsystem is in debug mode or not
+ * @param value The value
+ */
+exports.setDebugMode = function(value) {
+    config.debug = value;
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-classes_cloudlistener.html">classes/cloudlistener</a></li><li><a href="module-classes_config.html">classes/config</a></li><li><a href="module-classes_database_daemon.html">classes/database/daemon</a></li><li><a href="module-classes_database_plugin.html">classes/database/plugin</a></li><li><a href="module-classes_database_servertype.html">classes/database/servertype</a></li><li><a href="module-classes_database_user.html">classes/database/user</a></li><li><a href="module-classes_database_world.html">classes/database/world</a></li><li><a href="module-classes_loader.html">classes/loader</a></li><li><a href="module-classes_log.html">classes/log</a></li><li><a href="module-classes_mysql.html">classes/mysql</a></li><li><a href="module-classes_webserver.html">classes/webserver</a></li></ul><h3>Classes</h3><ul><li><a href="module-classes_database_daemon-Daemon.html">Daemon</a></li><li><a href="module-classes_database_plugin-Plugin.html">Plugin</a></li><li><a href="module-classes_database_servertype-Servertype.html">Servertype</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.2</a> on Wed Nov 18 2015 17:51:49 GMT+0100 (Mitteleuropäische Zeit)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
